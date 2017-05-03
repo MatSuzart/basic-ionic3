@@ -19,9 +19,9 @@ export class TarefasPage {
 
   }
   
-  callPush(page){
-    nav.setRoot(TarefasPage);
-    this.navCtrl.push(page)
+  callPush(page, params = {}){
+    navCtrl.setRoot(this);
+    this.navCtrl.push(page, params)
   }
 
   insert() {
