@@ -12,7 +12,7 @@
 <ion-list>
   <ion-item>
     <ion-label stacked>Descrição</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input [(ngModel)]="tarefa" type="text"></ion-input>
   </ion-item>
 </ion-list>
   <button ion-button full (click)="salvar()">
