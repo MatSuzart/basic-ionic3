@@ -7,16 +7,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'modal-tarefas.html',
 })
 export class ModalTarefas {
-
+  
+  tarefa: any;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModalTarefas');
   }
+  
+  callPush(page, params = {}){
+    nav.setRoot(this);
+    this.navCtrl.push(page, params)
+  }
 
   salvar() {
-    this.view.dismiss(this.tarefa);
+    /*this.view.dismiss(this.tarefa);*/
+    this.callPush(TarefasPage, {tarefa: this.tarefa});
   }
 
 }
