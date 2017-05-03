@@ -18,7 +18,7 @@ export class ModalTarefas {
   }
   
   callPush(page, params = {}){
-    nav.setRoot(this);
+    this.navCtrl.setRoot(this);
     this.navCtrl.push(page, params)
   }
 
