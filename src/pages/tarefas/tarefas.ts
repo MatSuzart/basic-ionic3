@@ -20,7 +20,7 @@ export class TarefasPage {
   }
   
   callPush(page, params = {}){
-    navCtrl.setRoot(this);
+    this.navCtrl.setRoot(this);
     this.navCtrl.push(page, params)
   }
 
