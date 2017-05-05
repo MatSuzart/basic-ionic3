@@ -18,9 +18,14 @@ export class TarefasPage {
     this.listTarefas = this.provider.getlist();
 
   }
+  
+  callPush(page, params = {}){
+    this.navCtrl.setRoot(this);
+    this.navCtrl.push(page, params)
+  }
 
   insert() {
-    this.navCtrl.push(ModalTarefas)
+    this.callPush(ModalTarefas);
   }
 
 
