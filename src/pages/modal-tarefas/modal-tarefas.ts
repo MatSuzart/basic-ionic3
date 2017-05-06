@@ -1,5 +1,5 @@
  import { Component } from '@angular/core';
- import { IonicPage, NavController, NavParams } from 'ionic-angular';
+ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
  import { TarefasPage } from '../tarefas/tarefas';
 
  @IonicPage()
@@ -9,10 +9,9 @@
   })
   export class ModalTarefas {
 
-
    tarefa: any;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
     }
 
     ionViewDidLoad() {
@@ -20,7 +19,7 @@
     }
 
     salvar() {
-     this.navCtrl.push(TarefasPage, {discricao: this.tarefa})
+     this.viewCtrl.dismiss(TarefasPage, {discricao: this.tarefa})
     }
 
   }
